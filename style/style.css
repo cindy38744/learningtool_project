@@ -1,7 +1,5 @@
-html {
+body {
     background-color: white;
-    width: 600px;
-  margin: 0 auto;
   }
 
 div.intro{
@@ -9,6 +7,14 @@ div.intro{
     width: 100%;
     padding: 10px;
     text-align: center;
+}
+
+div.content{
+  border: 1px solid black;
+  margin-left: 80px;
+  background-color: lightblue;
+  width: 600px;
+  margin-top: 50px;
 }
   
 h1 {
