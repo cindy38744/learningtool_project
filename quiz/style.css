@@ -15,6 +15,16 @@ body {
   input {
     margin: 5px 10px;
   }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
   button {
     font-size: 18px;
     padding: 10px;
