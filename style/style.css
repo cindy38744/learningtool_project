@@ -1,6 +1,12 @@
 body {
     background-color: rgb(126, 130, 131);
   }
+
+#intro{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
   
   h1 {
     color: black;
