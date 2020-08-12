@@ -42,8 +42,9 @@ h1 {
     max-width: 100%;
   }
   
-  div.desc {
+  div.quiz {
     text-align: left;
     font-family: Helvetica;
     margin: auto;
+    margin-top: 1000px;
   }
