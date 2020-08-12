@@ -32,7 +32,7 @@ h1 {
     margin: 10px;
     float: left;
     width: 180px;
-    height: auto;
+    height: 500px;
     background-color: white;
     box-shadow: 5px 5px 5px grey;
   }
@@ -51,5 +51,5 @@ h1 {
   div.quiz {
     text-align: left;
     font-family: Helvetica;
-    margin-top: 1000px;
+    
   }
