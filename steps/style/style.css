@@ -11,4 +11,12 @@ div.container {
     text-align: center;
     padding: 10px 20px;
   }
+
+  #back{
+      float: left;
+  }
+
+  #forward{
+      float: right;
+  }
   
