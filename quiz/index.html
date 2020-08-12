@@ -3,14 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>How to cook rice</title>
+  <title>Quick Test!</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
  <body>
-  
- </body>
+    <div id="wrapper">
+        <h1>Do you really know how to cook rice?</h1>
+        <p>Let's take a test to check your own understanding.</p>
+        
+        <form id="quiz">
+          <!-- Question 1 -->
+          <h2>What's the first step to cook rice?</h2>
+          <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+          <!-- The value is which answer the choice corresponds to. -->
+          <label><input type="radio" name="q1" value="c1">
+            Turning on the fire and leave it alone
+          </label><br />
+          <label><input type="radio" name="q1" value="c2">
+            Rinsing the rice and adding the water
+          </label><br />
+          <label><input type="radio" name="q1" value="c3">
+            Stirring quickly
+          </label><br />
+          <label><input type="radio" name="q1" value="c4">
+            All of them can be the first step
+          </label><br />
+          
 
+           <!-- Question 2 -->
+    <h2>After you add the lid and turn down the temperature, you need to cook for ____ minutes.</h2>
+    <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+    <label><input type="radio" name="q2" value="c1">
+      10
+    </label><br />
+    <label><input type="radio" name="q2" value="c2">
+      20
+    </label><br />
+    <label><input type="radio" name="q2" value="c3">
+      30
+    </label><br />
+    <label><input type="radio" name="q2" value="c4">
+      40
+    </label><br />
+    
+    <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+    <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+    </form>
+    
+    
+    <div id="answer">Your result will show up here!</div>
 
+</div>
+</body>
 </html>
