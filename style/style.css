@@ -30,6 +30,7 @@ h1 {
 
   div.gallery {
     margin: 10px;
+    margin-left: 50px;
     float: left;
     width: 200px;
     height: 450px;
