@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(126, 130, 131);
+  }
+  
+  h1 {
+    color: black;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 20px;
+  }
+  
+  p {
+    font-family: Helvetica;
+    font-size: 20px;
+  }
