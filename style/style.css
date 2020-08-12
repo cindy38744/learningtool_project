@@ -10,11 +10,8 @@ div.intro{
 }
 
 div.content{
-  border: 1px solid black;
-  margin-left: 80px;
-  background-color: lightblue;
-  width: 600px;
-  margin-top: 50px;
+  margin: auto;
+  width: 800px;
 }
   
 h1 {

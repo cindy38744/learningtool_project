@@ -1,13 +1,15 @@
-body {
-    margin-left: 80px;
-}
 
 div.container {
-    width: 80%;
-    height:100px;
+    width: 100%;
+    height: 800px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
+    margin: auto;
+  }
+
+  div.container img{
+      margin: auto;
+      width:100%;
   }
   
   div.text {
