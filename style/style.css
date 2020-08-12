@@ -12,6 +12,7 @@ div.intro{
 div.content{
   margin: auto;
   width: 800px;
+  height: 100%;
 }
   
 h1 {
@@ -41,10 +42,14 @@ h1 {
     max-height: 50%;
     max-width: 100%;
   }
+
+  div.desc{
+    width: 180px;
+    height: 130px;
+  }
   
   div.quiz {
     text-align: left;
     font-family: Helvetica;
-    margin: auto;
     margin-top: 1000px;
   }
