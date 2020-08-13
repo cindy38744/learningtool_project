@@ -2,9 +2,7 @@ body {
     font-family: sans-serif;
   }
 
-  h2 {
-    margin: 5px 0;
-  }
+
   #wrapper {
     width: 600px;
     margin: 0 auto;
@@ -25,21 +23,10 @@ body {
     box-sizing: border-box;
   }
 
-  button {
-    font-size: 18px;
-    padding: 10px;
-    margin: 20px 0;
-    color: white;
-    border: 0;
-    border-radius: 10px;
-    border-bottom: 3px solid #333;
-  }
   #submit {
     background: black;
   }
-  #reset {
-    background: red;
-  }
+ 
   #answer {
     border: 1px dashed #ccc;
     background: #eee;
