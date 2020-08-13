@@ -24,15 +24,13 @@ body {
   }
 
   #submit{
-    font-family: sans-serif;
-    font-size: 15px;
-    background-color: black;
-    color: #fff;
-    border: 0px;
-    border-radius: 3px;
+    font-size: 18px;
     padding: 10px;
-    cursor: pointer;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    border-bottom: 3px solid #333;
   }
 
   #submit:hover{
