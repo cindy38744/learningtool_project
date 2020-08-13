@@ -1,21 +1,21 @@
 var myQuestions = [
 	{
-		question: "What is 10/2?",
+		question: "What's the first step to cook rice?",
 		answers: {
-			a: '3',
-			b: '5',
-			c: '115'
+			a: 'Turning on the fire and leave it alone',
+			b: 'Rinsing the rice and adding the water',
+			c: 'Stirring quickly'
 		},
 		correctAnswer: 'b'
 	},
 	{
-		question: "What is 30/3?",
+		question: "After you add the lid and turn down the temperature, you need to cook for ____ minutes.",
 		answers: {
-			a: '3',
-			b: '5',
-			c: '10'
+			a: '10',
+			b: '20',
+			c: '30'
 		},
-		correctAnswer: 'c'
+		correctAnswer: 'b'
 	}
 ];
 
