@@ -12,11 +12,17 @@
     <div id="wrapper">
         <h1>Do you really know how to cook rice?</h1>
         <h2>Let's take a test to check your own understanding.</h2>
-        
+        <p>Part1: Multiple Choices</p>
         <div id="quiz"></div>
        
         <button id="submit" >Get Results</button>
         <div id="results"></div>
+        <p>Part2: Free Text Input Questions</p>
+        <form name="myForm">
+          What is the total step for cooking rice? <input type="text" name="quOne"><BR>
+          You should cook rice under high or low heat? <input type="text" name="quTwo"><BR>
+          <button onclick="checkAnswers()">Check your answers</button>
+          </form>
 
 
 

@@ -106,3 +106,19 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 	}
 
 }
+
+//Part2
+var answers = new Array("3", "low") 
+var userAnswers = new Array 
+function checkAnswers() { 
+userAnswers[0] = document.myForm.quOne.value 
+userAnswers[1] = document.myForm.quTwo.value 
+var count = answers.length 
+var correct = 0 
+for (var i = 0;i<count;i++) { 
+if(userAnswers[i]==answers[i]) { 
+correct=correct+1 
+} 
+} 
+alert("You got " + correct) 
+} 
