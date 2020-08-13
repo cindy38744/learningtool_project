@@ -108,15 +108,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 }
 
 //Part2
-var answers = new Array("3", "low") 
-var userAnswers = new Array 
+var answer2 = new Array("3", "low") 
+var userAnswer2 = new Array 
 function checkAnswers() { 
-userAnswers[0] = document.myForm.quOne.value 
-userAnswers[1] = document.myForm.quTwo.value 
-var count = answers.length 
+userAnswer2[0] = document.myForm.quOne.value 
+userAnswer2[1] = document.myForm.quTwo.value 
+var count = answer2.length 
 var correct = 0 
 for (var i = 0;i<count;i++) { 
-if(userAnswers[i]==answers[i]) { 
+if(userAnswer2[i]==answer2[i]) { 
 correct=correct+1 
 } 
 } 
