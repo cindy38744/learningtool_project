@@ -1,6 +1,9 @@
 var chatDatabase;
 $(init);
 
+var firebase = require('firebase/app');
+require('firebase/auth');
+require('firebase/database');
 
 function init() {
   
