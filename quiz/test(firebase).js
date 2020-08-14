@@ -1,19 +1,17 @@
-function initializeFirebase() {
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyBZBuJRqZgqhMmf2r8kDh-bbzSqayGZA6g",
-      authDomain: "best-learning-tool.firebaseapp.com",
-      databaseURL: "https://best-learning-tool.firebaseio.com",
-      projectId: "best-learning-tool",
-      storageBucket: "best-learning-tool.appspot.com",
-      messagingSenderId: "903760527283",
-      appId: "1:903760527283:web:1285b66fd1e08b9e4cd5c6",
-      measurementId: "G-6KW4JLX3Y1"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  }
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyD6ib-N_S2u0mXIcw2l5QpI9gqB3zpHnZ0",
+    authDomain: "how-to-cook-rice.firebaseapp.com",
+    databaseURL: "https://how-to-cook-rice.firebaseio.com",
+    projectId: "how-to-cook-rice",
+    storageBucket: "how-to-cook-rice.appspot.com",
+    messagingSenderId: "898659114829",
+    appId: "1:898659114829:web:6468a3304b041ef8ed2104",
+    measurementId: "G-ZL32BP2EN6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
   // Reference to the recommendations object in your Firebase database
 var recommendations = firebase.database().ref("recommendations");
