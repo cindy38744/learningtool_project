@@ -31,6 +31,7 @@
             </div>
             <div>
               <button class="submit btn btn-primary">Save</button>
+              <button class="read btn btn-primary">Read</button>
             </div>
           </form>
         </div>
@@ -61,6 +62,12 @@
         user_id = user_id ? user_id : fb.database().ref().child('user-data').push().key;
         updates[user_id] = $('form').getFormData();
         fb.database().ref().child('user-data').update(updates);
+      });
+
+      $('.read').on('click', function (e) {
+        firebase.database().ref().on('user-data',(snap)=>{
+    console.log(snap.val());
+  });
       });
     </script>
   </body>
