@@ -12,7 +12,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-var myDataRef = new Firebase('https://best-learning-tool.firebaseio.com');
+var myDataRef = firebase.database().ref();
 
 $('#messageInput').keypress(function(e) {
   if (e.keyCode == 13) {
