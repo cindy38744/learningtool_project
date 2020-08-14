@@ -16,6 +16,28 @@
     </div>
 
     <script src="test(firebase).js"></script>
-   
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBZBuJRqZgqhMmf2r8kDh-bbzSqayGZA6g",
+    authDomain: "best-learning-tool.firebaseapp.com",
+    databaseURL: "https://best-learning-tool.firebaseio.com",
+    projectId: "best-learning-tool",
+    storageBucket: "best-learning-tool.appspot.com",
+    messagingSenderId: "903760527283",
+    appId: "1:903760527283:web:43583df24861068f4cd5c6",
+    measurementId: "G-8TG7V959DN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
