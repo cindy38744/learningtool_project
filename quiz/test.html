@@ -65,19 +65,14 @@
         fb.database().ref().child('user-data').update(updates);
       });
 
-      var fireHeading = document.getElementById("read");
-// "key" is the customer key
-var ref = firebase.database().ref("user-data/" + key);
+      var ref = firebase.database().ref("user-data");
 
-ref.once("value", function(snapshot){
-// Contains all data from Firebase
-var data = snapshot.val();
-// Has customer name
-var customerName = data.first_name;
-
-// Append data to view
-fireHeading.innerText = customerName;
-
+ref.on("value", function(snapshot) {
+ snapshot.forEach(function(childSnapshot) {
+  var childData = childSnapshot.val();
+  var id=childData.first_name;
+  console.log(childData);
+ });
 });
     </script>
   </body>
