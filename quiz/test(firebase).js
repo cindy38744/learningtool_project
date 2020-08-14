@@ -14,7 +14,7 @@ var firebaseConfig = {
     if (e.keyCode == 13) {
       var name = $('#nameInput').val();
       var text = $('#messageInput').val();
-      myDataRef.push({
+      ref.push({
         name: name,
         text: text
       });
