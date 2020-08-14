@@ -8,178 +8,89 @@
   };
   firebase.initializeApp(config);
   
-  const App = () => (
-    <div className="comments">
-      <h2>Comments</h2>
-      <CommentForm />
-      <CommentList />
-      <footer>
-        React Hooks edition{" "}
-        <a target="blank" href="https://codepen.io/joshbivens/pen/aMjxVx">
-          here
-        </a>{" "}
-        • Vue edition{" "}
-        <a target="blank" href="https://codepen.io/joshbivens/pen/pYVBpG">
-          here
-        </a>{" "}
-        | &#169; 2019 by{" "}
-        <a target="blank" href="https://github.com/joshbivens">
-          Josh Bivens
-        </a>
-      </footer>
-    </div>
-  );
+  var msgInput = $("#msg")
+  var sendButton = $("#send")
+  var text = $("#msgDisplay")
+  var chatRoom = $("#room")
+  var roomList = $("#chatList")
+  var maxMsgs = 5
+  var db = firebase.database()
+  var msgMondiale = db.ref("pippos")
   
-  class CommentForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        username: "",
-        comment: ""
-      };
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleChange = this.handleChange.bind(this);
-    }
-  
-    formatTime() {
-      const options = {
-        month: "2-digit",
-        day: "2-digit",
-        year: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit"
-      };
-      let now = new Date().toLocaleString("en-US", options);
-      return now;
-    }
-  
-    escapeHTML(html) {
-      // [1]
-      const div = document.createElement("div");
-      div.textContent = html;
-      return div.innerHTML;
-    }
-  
-    handleSubmit(e) {
-      e.preventDefault();
-      const user = {
-        username: this.escapeHTML(this.state.username),
-        comment: this.escapeHTML(this.state.comment),
-        time: this.formatTime()
-      };
-  
-      const db = firebase.database().ref("comments");
-      db.push(user);
-  
-      this.setState({
-        username: "",
-        comment: ""
-      });
-    }
-  
-    handleChange(e) {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
-    }
-  
-    render() {
-      return (
-        <div className="comments-form">
-          <form onSubmit={this.handleSubmit}>
-            <ul>
-              <li>
-                <input
-                  name="username"
-                  type="text"
-                  placeholder="Name"
-                  value={this.state.username}
-                  onChange={this.handleChange}
-                  required
-                />
-              </li>
-              <li>
-                <textarea
-                  name="comment"
-                  placeholder="Comment"
-                  value={this.state.comment}
-                  onChange={this.handleChange}
-                  required
-                />
-              </li>
-              <li>
-                <input type="submit" value="Post" />
-              </li>
-            </ul>
-          </form>
-        </div>
-      );
+  var viewMessages = function(x){
+    
+    var msgs = x.val()
+    var l = msgs.length
+    console.log(msgs)
+    for (var i = l-maxMsgs;i<l;i++ ){
+      
+      var mex = msgs[i]
+      var newP = $("<p>")
+      newP.text(mex)
+      text.prepend(newP)
     }
   }
   
-  class CommentList extends React.Component {
-    state = { comments: [] };
-    componentWillMount() { // [2]
-      const db = firebase.database().ref("comments");
-      const MAX_COUNT = 9;
-      db.on("value", snapshot => {
-        if (snapshot.numChildren() > MAX_COUNT) {
-          let childCount = 0;
-          let updates = {};
-          snapshot.forEach(child => {
-            if (++childCount < snapshot.numChildren() - MAX_COUNT) {
-              updates[child.key] = null;
+  var sendMsg = function (){
+     var name = $("#name").val()
+     var msg =  msgInput.val()
+    
+     if(name != ": " && msg != ""){
+    msgMondiale.push([name,msg])}
+  }
+  
+  var updateText = function(x){
+     text.empty()
+    msgs = x.val()
+  
+    for(i in msgs){
+      
+      var msgName = msgs[i][0]
+      var msgText = msgs[i][1]
+      var newP = $("<p class='message'>")
+      var newPname = $("<span class='senderName'>")
+            newPname.text(msgName+": ")
+      
+      if(msgText.includes("/embed ")){
+        var codeToEmbed = msgText.replace("/embed ","")
+        newP.prepend($("codeToEmbed"))
+        alert(codeToEmbed)
+      }
+         //If no commands are included
+        else{
+            var newPmsg = $("<span class='messageText'>")
+            newPmsg.text(msgText)
+            newP.prepend(newPmsg)
             }
-          });
-          db.update(updates);
-        }
-      });
-    }
-    componentDidMount() {
-      const db = firebase.database().ref("comments");
-  
-      db.on("value", snapshot => {
-        const comments = snapshot.val();
-        const arr = [];
-        for (const comment in comments) {
-          arr.push({
-            username: comments[comment].username,
-            comment: comments[comment].comment,
-            time: comments[comment].time
-          });
-        }
-  
-        this.setState({
-          comments: arr.reverse()
-        });
-      });
-    }
-    render() {
-      return (
-        <div className="comments-list">
-          {this.state.comments.map(comment => (
-            <Comment
-              username={comment.username}
-              comment={comment.comment}
-              time={comment.time}
-            />
-          ))}
-        </div>
-      );
-    }
+      newP.prepend(newPname)
+            text.prepend(newP)
+       }
   }
   
-  const Comment = ({ username, comment, time }) => (
-    <div className="comment">
-      <h4>{username} says</h4>
-      <p className="timestamp">{time}</p>
-      <p>{comment}</p>
-    </div>
-  );
+  var dDos = function(){
+    sendMsg()
+    updateText(msgMondiale.val())
+  }
   
-  const mountNode = document.getElementById("app");
-  ReactDOM.render(<App />, mountNode);
+  //msgInput.on("change",sendMsg)
+  sendButton.on("click",sendMsg)
+  msgMondiale.on("value",updateText)
+  //msgMondiale.on("value",viewMessages)
   
-
+  //Added later
   
+  var changeRoom = function(x){
+     msgMondiale = db.ref(x.val())
+    $(".display").empty()
+    msgMondiale.on("value",updateText)
+  }
   
+  chatRoom.on("change",function(){
+     msgMondiale = db.ref(chatRoom.val())
+    $(".display").empty()
+    msgMondiale.on("value",updateText)})
+  
+  roomList.on("change",function(){
+     msgMondiale = db.ref(roomList.val())
+    $(".display").empty()
+    msgMondiale.on("value",updateText)})
