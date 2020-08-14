@@ -9,6 +9,13 @@
 </head>
 
  <body>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
     <div id="wrapper">
         <h1>Do you really know how to cook rice?</h1>
         <h2>Let's take a test to check your own understanding.</h2>
@@ -21,7 +28,7 @@
         <form name="myForm">
           What is the total step for cooking rice? <input type="text" name="quOne"><BR>
           You should cook rice under high or low heat? <input type="text" name="quTwo"><BR>
-          <button onclick="checkAnswers()">Check your answers</button>
+          <button onclick="checkAnswers()">Get Results</button>
           </form>
 
 

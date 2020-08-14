@@ -9,10 +9,59 @@
 </head>
 
  <body>
-    <div id="quiz"></div>
-    <button id="submit">Get Results</button>
-    <div id="results"></div>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
 
-<script src="quiz.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+  <div class="container">
+    <h1>Talks You Should Watch</h1>
+
+    <h3>Last Talk Proposed</h3>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Presenter</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- This is empty for now, but it will be filled out by an event handler in application.js with the most recent recommendation data from Firebase. -->
+          <td id="title"></td>
+          <td id="presenter"></td>
+          <td><a id="link" target="_blank"></a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Submit a Talk</h3>
+
+    <form id="recommendationForm">
+      <div class="form-group">
+        <label for="talkTitle">Title</label>
+        <input class="form-control" id="talkTitle" placeholder="Title of the talk">
+      </div>
+
+      <div class="form-group">
+        <label for="talkPresenter">Presenter</label>
+        <input class="form-control" id="talkPresenter" placeholder="Name of the presenter">
+      </div>
+
+      <div class="form-group">
+        <label for="talkLink">Link</label>
+        <input type="url" class="form-control" id="talkLink" placeholder="Link to a recording of the talk">
+      </div>
+
+      <!-- When you click this button, trigger the submit event on this form. -->
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+<script src="test(firebase).js"></script>
 </body>
 </html>
