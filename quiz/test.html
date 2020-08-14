@@ -4,76 +4,10 @@
     <title>Firebase Sample</title>
   </head>
   <body>
-    <div class="container">
-      <div class="page-header">
-        <h1>Firebase Sample</h1>
-      </div>
-    </div>
-    <div class="container row">
-        <div class="col-xs-12">
-            <h2>Instructions:</h2>
-            <ul>
-                <li>Create a firebase application on the <a href="https://console.firebase.google.com" target="blank">console</a></li>
-                <li>Replace the information marked as &lt;REPLACE ME&gt; with the correct information from the project's console</li>
-            </ul>
-            <h2>Todo:</h2>
-            <p><strong><a href="https://www.firebase.com/docs/web/guide/user-auth.html">Add User Login</a></strong></p>
-            <p><strong><a href="https://www.firebase.com/docs/security/guide/user-security.html">Add Security Rules</a></strong></p>
-        </div>
-    </div>
-    <div class="container row">
-      <div class="col-xs-12">
-        <div class="form">
-          <form action="" class="form">
-            <div class="control-group">
-              <label for="first_name">Name</label>
-              <input type="text" name="first_name">
-            </div>
-            <div>
-              <button class="submit btn btn-primary">Save</button>
-            </div>
+    <div id="app"></div>
 
-            <div id="read"></div>
-          </form>
-        </div>
-      </div>
-    </div>
     <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-    <script>
-    $.fn.getFormData = function() {
-      var fields = this.find('[name]');
-      var result = {};
-      $.each(fields, function (i, el) {
-        result[el.name] = el.value;
-      });
-      return result;
-    };
-      var config = {
-          apiKey: "AIzaSyD6ib-N_S2u0mXIcw2l5QpI9gqB3zpHnZ0",
-          authDomain: "how-to-cook-rice.firebaseapp.com",
-          databaseURL: "https://how-to-cook-rice.firebaseio.com",
-          storageBucket: "how-to-cook-rice.appspot.com",
-      };
-      var fb = firebase.initializeApp(config);
-      var user_id;
-      $('.submit').on('click', function (e) {
-        e.preventDefault();
-        var updates = {};
-        user_id = user_id ? user_id : fb.database().ref().child('user-data').push().key;
-        updates[user_id] = $('form').getFormData();
-        fb.database().ref().child('user-data').update(updates);
-      });
-
-      var ref = firebase.database().ref("user-data");
-
-ref.on("value", function(snapshot) {
- snapshot.forEach(function(childSnapshot) {
-  var childData = childSnapshot.val();
-  var id=childData.first_name;
-  console.log(childData);
- });
-});
-    </script>
+   
   </body>
 </html>
