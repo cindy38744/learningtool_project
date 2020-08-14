@@ -1,27 +1,8 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
+  var config = {
     apiKey: "AIzaSyD6ib-N_S2u0mXIcw2l5QpI9gqB3zpHnZ0",
     authDomain: "how-to-cook-rice.firebaseapp.com",
     databaseURL: "https://how-to-cook-rice.firebaseio.com",
-    projectId: "how-to-cook-rice",
     storageBucket: "how-to-cook-rice.appspot.com",
-    messagingSenderId: "898659114829",
-    appId: "1:898659114829:web:6468a3304b041ef8ed2104",
-    measurementId: "G-ZL32BP2EN6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-  / TODO: Replace with your project's config object. You can find this
-  // by navigating to your project's console overview page
-  // (https://console.firebase.google.com/project/your-project-id/overview)
-  // and clicking "Add Firebase to your web app"
-  var config = {
-    apiKey: "<your-api-key>",
-    authDomain: "<your-project-id>.firebaseapp.com",
-    databaseURL: "https://<your-project-id>.firebaseio.com",
-    storageBucket: "<your-project-id>.appspot.com",
   };
   
   // Initialize your Firebase app
