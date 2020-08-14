@@ -8,7 +8,7 @@
   };
   firebase.initializeApp(config);
   
-  var myDataRef = new Firebase('https://iy0ehi1x78u.firebaseio-demo.com/');
+  var myDataRef = new Firebase('https://how-to-cook-rice.firebaseio.com');
 
   $('#messageInput').keypress(function(e) {
     if (e.keyCode == 13) {
