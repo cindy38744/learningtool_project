@@ -31,8 +31,9 @@
             </div>
             <div>
               <button class="submit btn btn-primary">Save</button>
-              <button class="read btn btn-primary">Read</button>
             </div>
+
+            <div id="read"></div>
           </form>
         </div>
       </div>
@@ -64,11 +65,20 @@
         fb.database().ref().child('user-data').update(updates);
       });
 
-      $('.read').on('click', function (e) {
-        firebase.database().ref().on('user-data',(snap)=>{
-    console.log(snap.val());
-  });
-      });
+      var fireHeading = document.getElementById("read");
+// "key" is the customer key
+var ref = firebase.database().ref("user-data/" + key);
+
+ref.once("value", function(snapshot){
+// Contains all data from Firebase
+var data = snapshot.val();
+// Has customer name
+var customerName = data.first_name;
+
+// Append data to view
+fireHeading.innerText = customerName;
+
+});
     </script>
   </body>
 </html>
