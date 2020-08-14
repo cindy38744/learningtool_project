@@ -12,6 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -30,6 +31,12 @@
           You should cook rice under high or low heat? <input type="text" name="quTwo"><BR>
           <button onclick="checkAnswers()">Get Results</button>
           </form>
+          <p>Part3: Leave your questions</p>
+          <div id="inputs">
+            <input type="text" id="nameInput" placeholder="Name">
+            <input type="text" id="messageInput" placeholder="Question(and Enter)>
+          </div>
+          <ul id="messages"></ul>
 
 
 

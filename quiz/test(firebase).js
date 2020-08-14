@@ -20,7 +20,7 @@ function init() {
   };
   firebase.initializeApp(config);
 
-  var chatDatabase = firebase.database().ref("chat");
+  var chatDatabase = firebase.database().ref("question");
   
   // When the user presses enter on the message input, write the message to firebase.
   $("#messageInput").keypress(function (e) {
