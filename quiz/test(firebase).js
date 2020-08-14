@@ -1,14 +1,6 @@
-  const config = {
-    apiKey: "AIzaSyD6ib-N_S2u0mXIcw2l5QpI9gqB3zpHnZ0",
-    authDomain: "how-to-cook-rice.firebaseapp.com",
-    databaseURL: "https://how-to-cook-rice.firebaseio.com",
-    projectId: "how-to-cook-rice",
-    storageBucket:  "how-to-cook-rice.appspot.com",
-    messagingSenderId: "G-ZL32BP2EN6"
-  };
-  firebase.initializeApp(config);
-  
-  var myDataRef = firebase;
+var myDataRef = new Firebase('https://how-to-cook-rice.firebaseio.com/');
+
+
 
   $('#messageInput').keypress(function(e) {
     if (e.keyCode == 13) {
