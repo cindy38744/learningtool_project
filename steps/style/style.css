@@ -21,11 +21,31 @@ div.container {
     padding: 10px 20px;
   }
 
-  #back{
+  #back, #back:visited{
       float: left;
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
   }
 
-  #forward{
-      float: right;    
+  #back:hover, #back:active {
+    background-color: #666666;
+  }
+
+  #forward, #forward:visited{
+      float: right;  
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;  
+  }
+
+  #forward:hover, #forward:active {
+    background-color: #666666;
   }
   
