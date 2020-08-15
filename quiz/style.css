@@ -44,7 +44,7 @@ body {
     padding: 10px;
   }
 
-  .main {
+  button.main {
     display: inline-block;
     border-radius: 4px;
     background-color: black;
@@ -59,14 +59,14 @@ body {
     margin: 5px;
   }
   
-  .main span {
+  button.main span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
   
-  .main span:after {
+  button.main span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -75,11 +75,11 @@ body {
     transition: 0.5s;
   }
   
-  .main:hover span {
+  button.main:hover span {
     padding-left: 25px;
   }
   
-  .main:hover span:after {
+  button.main:hover span:after {
     opacity: 1;
     left: 0;
   }
