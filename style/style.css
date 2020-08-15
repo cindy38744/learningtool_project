@@ -54,15 +54,15 @@ h1 {
     margin: auto;
   }
 
-#link {
-    background-color: #f44336;
+  a:link, a:visited {
+    background-color: black;
     color: white;
-    padding: 14px 25px;
+    padding: 12px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
   }
   
-  #link:hover, #linkv:active {
-    background-color: red;
+  a:hover, a:active {
+    background-color: #666666;
   }
