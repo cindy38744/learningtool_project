@@ -14,6 +14,9 @@ div.content{
   width: 800px;
   height: 500px;
   padding: 10px;
+  animation-name: example;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
 }
   
 h1 {
@@ -36,9 +39,6 @@ h1 {
     height: 450px;
     background-color: white;
     box-shadow: 5px 5px 5px grey;
-    animation-name: example;
-    animation-duration: 2s;  
-    animation-fill-mode: forwards;
   }
   
   @keyframes example {
