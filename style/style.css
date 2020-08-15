@@ -64,6 +64,7 @@ h1 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    transition: 0.3s;
   }
   
   a:hover, a:active {
