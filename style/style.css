@@ -36,8 +36,15 @@ h1 {
     height: 450px;
     background-color: white;
     box-shadow: 5px 5px 5px grey;
+    animation-name: example;
+    animation-duration: 2s;  
+    animation-fill-mode: forwards;
   }
   
+  @keyframes example {
+    from {top: -10px;}
+    to {top: 0px;}
+  }
   
   div.gallery img {
     max-height: 50%;
