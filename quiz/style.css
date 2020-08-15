@@ -43,3 +43,43 @@ body {
     background: #eee;
     padding: 10px;
   }
+
+  .main {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
+    width: 450px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .main span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .main span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .main:hover span {
+    padding-right: 25px;
+  }
+  
+  .main:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
