@@ -50,7 +50,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			// add this question and its answers to the output
 			output.push(
 				'<div class="question">' + questions[i].question + '</div>'
-				+ '<div class="answers">' + answers.join('') + '</div>'
+				+ '<input type="text" class="answers">' + answers.join('') + '</input>'
 			);
 		}
 
