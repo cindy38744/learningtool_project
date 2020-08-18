@@ -67,7 +67,7 @@ body {
   }
   
   button.main span:after {
-    content: "\f100";
+    content: "\00bb";
     position: absolute;
     opacity: 0;
     top: 0;
