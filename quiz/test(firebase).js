@@ -1,13 +1,13 @@
 var myQuestions = [
 	{
 		question: "What's the total number of steps to cook rice?",
-		answers: {""
+		answers: {
 		},
 		correctAnswer: '3'
 	},
 	{
 		question: "You need to cook under high/low temperature?",
-		answers: {""
+		answers: {
 		},
 		correctAnswer: 'low'
 	}
